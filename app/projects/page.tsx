@@ -1,8 +1,10 @@
+import { Project } from "@/lib/projects-db"
+
 export default async function Projects() {
     const response = await fetch("http://localhost:3000/api/projects"
     )
 
-    const projects = await response.json()    
+    const projects: Project[] = await response.json()    
     return (
         <>
             <h1>Projects Overview</h1>
