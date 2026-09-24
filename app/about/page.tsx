@@ -1,4 +1,6 @@
 import Skills from "@/components/Skills"
+import type { Metadata } from "next";
+
 const skills = [
     {
         description: "PHP"
@@ -10,6 +12,10 @@ const skills = [
         description: "MySQL"
     },
 ]
+
+export const metadata: Metadata = {
+  title: 'About',
+};
 
 export default function About() {
     return (
