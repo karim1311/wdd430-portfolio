@@ -1,10 +1,7 @@
-import { Project } from "@/lib/projects-db"
+import { getProjects, Project } from "@/lib/projects-db"
 
 export default async function Projects() {
-    const response = await fetch("http://localhost:3000/api/projects"
-    )
-
-    const projects: Project[] = await response.json()    
+    const projects: Project[] = await getProjects()    
     return (
         <>
             <h1>Projects Overview</h1>

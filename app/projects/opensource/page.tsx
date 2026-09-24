@@ -1,10 +1,8 @@
-import { Project } from "@/lib/projects-db"
+import { getProjects, Project } from "@/lib/projects-db"
 
 export default async function OpenSourceProjectsPage() {
-    const response = await fetch("http://localhost:3000/api/projects?type=opensource"
-    )
 
-    const projects: Project[] = await response.json()
+    const projects: Project[] = await getProjects("opensource")
     return (
         <>
             <h1>Open Source Projects</h1>
